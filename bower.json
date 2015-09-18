@@ -1,0 +1,12 @@
+{
+  "name": "arteffects",
+  "description": "Official site of Arteffects International.",
+  "version": "0.0.1",
+  "homepage": "http://arteffects.international",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "*",
+    "bootstrap-sass": "*"
+  }
+}

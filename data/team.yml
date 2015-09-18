@@ -1,0 +1,111 @@
+hh:
+  avatar: "hh.jpg"
+  name: "Hafiz Hamidun"
+  pos: "Chairman &amp; Creative Director"
+  social:
+    facebook:  "hafizhamidun"
+    twitter:   "hafizhamidun"
+    instagram: "hafizhamidun"
+    email:     "newmedia@hafizhamidun.com"
+
+zam:
+  avatar: "zam.jpg"
+  name: "Izham Shah"
+  pos: "Managing Director &amp; CEO"
+  social:
+    facebook:  "izham.shah.92"
+    email:     "izhamshah@arteffectsinternational.com"
+
+shima:
+  avatar: "shima.jpg"
+  name: "Shima Uzir"
+  pos: "Director, Financial Department"
+  social:
+    facebook:  "chimotgomez"
+    twitter:   "Chimot_Gomez"
+    instagram: "chimotgomez"
+    email:     "finance@arteffectsinternational.com"
+
+kojem:
+  avatar: "kojem.jpg"
+  name: "Huzaimi Zaini"
+  pos: "Head, A &amp; R Department"
+  social:
+    facebook:  "huzaimi.zaini"
+    twitter:   "Huzaimi_NSH"
+    instagram: "huzaimi_zaini"
+    email:     "huzaimi@arteffectsinternational.com"
+
+wan:
+  avatar: "wan.jpg"
+  name: "Wan Saleh"
+  pos: "Arranger &amp; Studio Engineer"
+  social:
+    facebook:  "wansaleh"
+    twitter:   "wansaleh"
+    instagram: "wansaleh"
+    email:     "wansaleh@arteffectsinternational.com"
+
+khidir:
+  avatar: "khidir.jpg"
+  name: "Khidir Rahim"
+  pos: "Designer, Graphic Department"
+  social:
+    facebook:  "muhammad.khidir.7"
+    instagram: "muhd_khidir"
+    email:     "khidir@arteffectsinternational.com"
+
+alan:
+  avatar: "alan.jpg"
+  name: "Azlan Al-Bukhary"
+  pos: "Head, Public Relations &amp; Promotions"
+  social:
+    facebook:  "azlanalbukhari"
+    twitter:   "azlanalbukhary"
+    instagram: "azlanalbukhary"
+    email:     "wansaleh@arteffectsinternational.com"
+
+aizat:
+  avatar: "aizat.jpg"
+  name: "Aizat Jaafar"
+  pos: "Head, Events Department"
+  social:
+    facebook:  "aizatjaafarhufaz"
+    twitter:   "aizatjaafar"
+    instagram: "aizatjaafar"
+    email:     "aizat@arteffectsinternational.com"
+
+fj:
+  avatar: "fj.jpg"
+  name: "Fairus Jamil"
+  pos: "Manager, Sales Department"
+  social:
+    facebook:  "fairusjamil"
+    twitter:   "fairusjamil"
+    instagram: "fairusjamil"
+    email:     "fairus@arteffectsinternational.com"
+
+husna:
+  avatar: "husna.jpg"
+  name: "Nurul Husna"
+  pos: "Executive, Sales Department"
+  social:
+    facebook:  "nurul.husna.731572"
+    twitter:   "nurulhusna89"
+    instagram: "nurulhusna_05"
+    email:     "husna@arteffectsinternational.com"
+
+syam:
+  avatar: "syam.jpg"
+  name: "Syam Zawawi"
+  pos: "Executive, Sales Department"
+  social:
+    facebook:  "mohdsyamsuri26"
+    twitter:   "syamunic"
+    instagram: "syamzawawi"
+    email:     "syamunic@gmail.com"
+
+you:
+  avatar: "you.svg"
+  name: "You"
+  pos: "Are you interested?"

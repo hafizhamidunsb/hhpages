@@ -1,0 +1,106 @@
+<%
+def active_class(page_name)
+  page_classes.start_with?(page_name) ? "active" : ""
+end
+%>
+
+<!-- BEGIN HEADER -->
+<nav class="header <%= if defined? headerclass then headerclass end %>" data-pages="header" <%= if defined? headerextras then headerextras end %>>
+  <div class="container relative">
+
+    <!-- BEGIN LEFT CONTENT -->
+    <div class="pull-left z-index-10">
+      <!-- BEGIN HEADER TOGGLE FOR MOBILE -->
+      <div class="visible-sm-inline visible-xs-inline menu-toggler pull-right" data-pages="header-toggle" data-pages-element="#header">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+      </div>
+    </div>
+
+    <!-- BEGIN CENTER CONTENT -->
+    <div class="pull-center">
+      <div class="pull-center-inner">
+        <div class="header-inner">
+          <a href="/">
+            <!-- BEGIN LOGO -->
+            <img src="assets/images/logo/hh-black.svg" data-src-retina="assets/images/logo/hh-black.svg" class="alt" alt="" style="height:40px;">
+            <img src="assets/images/logo/hh-white.svg" data-src-retina="assets/images/logo/hh-white.svg" class="logo" alt="" style="height:40px;">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- END CENTER CONTENT -->
+
+    <!-- BEGIN MENU -->
+    <div class=" menu-content clearfix" data-pages="menu-content" data-pages-direction="slideLeft" id="header">
+
+      <!-- BEGIN HEADER CLOSE TOGGLE FOR MOBILE -->
+      <div class="pull-left">
+        <a href="#" class="text-black link padding-10 visible-xs-inline visible-sm-inline pull-right m-t-10 m-b-10 m-r-10" data-pages="header-toggle" data-pages-element="#header">
+          <i class=" pg-close_line"></i>
+        </a>
+      </div>
+
+      <div class="pull-left sm-full-width">
+        <div class="header-inner">
+
+          <!-- BEGIN MENU ITEMS -->
+          <ul class="menu">
+            <li>
+              <a href="/" data-text="Home" class="<%= active_class('index') %>">Home</a>
+            </li>
+            <li class="classic">
+              <a href="javascript:;" data-text="Apparel" class="<%= active_class('apparel') %>">Apparel <i class="pg-arrow_minimize m-l-5"></i></a>
+              <nav class="classic">
+                <span class="arrow"></span>
+                <ul>
+                  <li>
+                    <a href="#">Thobe ثَوب‎</a>
+                  </li>
+                  <li>
+                    <a href="#">Shirt</a>
+                  </li>
+                  <li>
+                    <a href="#">Accessories</a>
+                  </li>
+                </ul>
+              </nav>
+            </li>
+            <li>
+              <a href="/music" data-text="Music" class="<%= active_class('music') %>">Music</a>
+            </li>
+          </ul>
+          <!-- END MENU ITEMS -->
+
+        </div>
+      </div>
+
+      <div class="pull-right sm-full-width">
+        <div class="header-inner">
+
+          <!-- BEGIN MENU ITEMS -->
+          <ul class="menu">
+            <li>
+              <a href="/about" data-text="About" class="<%= active_class('about') %>">About</a>
+            </li>
+            <li>
+              <a href="/contact" data-text="Contact" class="<%= active_class('contact') %>">Contact</a>
+            </li>
+          </ul>
+          <!-- END MENU ITEMS -->
+
+          <!-- BEGIN COPYRIGHT FOR MOBILE -->
+          <div class="font-lato m-l-35 m-r-35 m-b-20 m-t-20 visible-sm visible-xs">
+            <p class="fs-11 muted">Copyright &copy; 2015 Hafiz Hamidun</p>
+          </div>
+          <!-- END COPYRIGHT FOR MOBILE -->
+
+        </div>
+      </div>
+    </div>
+    <!-- END MENU -->
+
+  </div>
+</nav>
+<!-- END HEADER -->

@@ -1,0 +1,49 @@
+<%
+icontype = "si-borderless"
+
+if defined? type then
+  icontype = type
+end
+%>
+<ul class="social-links no-margin">
+<% if defined? facebook then %>
+  <li><a href="https://www.facebook.com/<%= facebook %>" target="_blank" class="social-icon <%= icontype %> si-facebook" title="Facebook">
+    <i class="icon-facebook"></i>
+  </a></li>
+<% end %>
+<% if defined? twitter then %>
+  <li><a href="https://twitter.com/<%= twitter %>" target="_blank" class="social-icon <%= icontype %> si-twitter" title="Twitter">
+    <i class="icon-twitter"></i>
+  </a></li>
+<% end %>
+<% if defined? instagram then %>
+  <li><a href="https://instagram.com/<%= instagram %>" target="_blank" class="social-icon <%= icontype %> si-instagram" title="Instagram">
+    <i class="icon-instagram"></i>
+  </a></li>
+<% end %>
+<% if defined? youtube then %>
+  <li><a href="https://www.youtube.com/<%= youtube %>" target="_blank" class="social-icon <%= icontype %> si-youtube" title="Youtube">
+    <i class="icon-youtube"></i>
+  </a></li>
+<% end %>
+<% if defined? itunes then %>
+  <li><a href="<%= itunes %>" target="_blank" class="social-icon <%= icontype %> si-itunes" title="Youtube">
+    <i class="icon-itunes"></i>
+  </a></li>
+<% end %>
+<% if defined? spotify then %>
+  <li><a href="<%= spotify %>" target="_blank" class="social-icon <%= icontype %> si-spotify" title="Youtube">
+    <i class="icon-spotify"></i>
+  </a></li>
+<% end %>
+<% if defined? soundcloud then %>
+  <li><a href="https://www.soundcloud.com/<%= soundcloud %>" target="_blank" class="social-icon <%= icontype %> si-soundcloud" title="Soundcloud">
+    <i class="icon-soundcloud"></i>
+  </a></li>
+<% end %>
+<% if defined? email then %>
+  <li><a href="mailto:<%= email %>" target="_blank" class="social-icon <%= icontype %> si-email3" title="Email">
+    <i class="icon-envelope-alt"></i>
+  </a></li>
+<% end %>
+</ul>
