@@ -49,10 +49,9 @@ module.exports = function(grunt) {
     }
   });
 
-  // grunt.registerTask(
-  //   'build',
-  //   'Compiles all of the assets and copies the files to the build directory.', ['copy', 'cssmin']
-  // );
+  grunt.registerTask(
+    'build', ['less', 'middleman:build']
+  );
 
   grunt.registerTask('default', ['concurrent:middleman']);
 };
