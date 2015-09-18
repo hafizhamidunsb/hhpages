@@ -13,18 +13,18 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       less: {
-        files: 'source/assets/pages/less/**/*.less',
+        files: 'source/assets/_pages/less/**/*.less',
         tasks: 'less'
       }
     },
     less: {
       default: {
         options: {
-          paths: ['source/assets/pages/less'],
+          paths: ['source/assets/_pages/less'],
           yuicompress: false
         },
         files: {
-          'source/assets/css/_pages-compiled.css': 'source/assets/pages/less/pages.less'
+          'source/assets/css/_pages-compiled.css': 'source/assets/_pages/less/pages.less'
         }
       }
     },
