@@ -40,11 +40,9 @@ module.exports = function(grunt) {
       }
     },
     concurrent: {
-      middleman: {
-        tasks: ['middleman:server', 'watch'],
-        options: {
-          logConcurrentOutput: true
-        }
+      tasks: ['watch:less', 'middleman:server'],
+      options: {
+        logConcurrentOutput: true
       }
     }
   });
@@ -53,5 +51,5 @@ module.exports = function(grunt) {
     'build', ['less', 'middleman:build']
   );
 
-  grunt.registerTask('default', ['concurrent:middleman']);
+  grunt.registerTask('default', ['concurrent']);
 };

@@ -1,31 +1,39 @@
 // CORE FRAMEWORK
-//= require "_pages/pages.image.loader.js"
-//= require "_plugins/jquery/jquery-1.11.1.min.js"
+//= require "jquery"
 
-// SLIDER DEPENDENCIES
-//= require "_plugins/swiper/js/swiper.jquery.js"
-//= require "_plugins/velocity/velocity.min.js"
-//= require "_plugins/velocity/velocity.ui.js"
+// SLIDER
+// Customized swiper plugin
+//= require "plugins/swiper/js/swiper.jquery"
+
+//= require "velocity/velocity"
+//= require "velocity/velocity.ui"
 
 // RETINA IMAGE LOADER
-//= require "_plugins/jquery-unveil/jquery.unveil.min.js"
+//= require "jquery-unveil"
 
 // TEXT ROTATOR
-//= require "_plugins/text-rotate/jquery.simple-text-rotator.js"
+//= require "plugins/text-rotate/jquery.simple-text-rotator"
 
 // AUTO-ANIMATE NUMBERS
-//= require "_plugins/jquery-appear/jquery.appear.js"
-//= require "_plugins/animateNumber/jquery.animateNumbers.js"
+//= require "jquery_appear"
+//= require "plugins/animateNumber/jquery.animateNumbers"
 
 // VIDEO
-//= require "_plugins/fitvids/jquery.fitvids.js"
+//= require "jquery.fitvids"
 
 // ISOTOPE
-//= require "_plugins/imagesloaded/imagesloaded.pkgd.min.js"
-//= require "_plugins/jquery-isotope/isotope.pkgd.min.js"
-
-// GALLERY
-//= require "gallery.js"
+//= require "imagesloaded/imagesloaded.pkgd"
+//= require "isotope/dist/isotope.pkgd"
 
 // PAGES FRONTEND
+//= require "_pages/pages.image.loader.js"
 //= require "_pages/pages.frontend.js"
+//= require "_pages/ui/float"
+//= require "_pages/ui/header"
+//= require "_pages/ui/parallax"
+
+// GALLERY
+//= require "_gallery"
+
+// unorphanize
+//= require "jquery-unorphanize"

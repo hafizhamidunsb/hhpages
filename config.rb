@@ -16,7 +16,7 @@ end
 # Livereload
 # ----------------------------------------------
 configure :development do
-  activate :livereload, ignore: ["*.less"]
+  activate :livereload, :ignore => ["*.less"]
 end
 
 # Paths

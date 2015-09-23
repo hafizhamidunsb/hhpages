@@ -3,50 +3,134 @@
   :headerextras => 'data-pages-header="autoresize" data-pages-resize-class="light"'
 } %>
 
-<%= partial "jumbotron" %>
+<!-- BEGIN JUMBOTRON -->
+<section class="jumbotron full-height" data-pages="parallax">
+  <div class="inner full-height">
+    <!-- BEGIN SLIDER -->
+    <div class="swiper-container" id="hero">
+      <div class="swiper-wrapper">
 
-<section class="p-t-65 p-b-60 bg-master">
-  <div class="container">
-    <div class="md-p-l-20 md-p-r-20 xs-no-padding text-white">
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <div class="sm-p-l-20 xs-no-padding">
-            <blockquote class="font-raleway">
-              <p class="fs-20">I love divine music. Buddhist, Christian, Hindu, Jewish, I listen to it all. I love it all. As a Muslim, I sing in Arabic and in my own language and compose my own material. It’s my interpretation of the religion.</p>
-
-              <p class="m-t-30 fs-12 hint-text">
-                <b>HAFIZ HAMIDUN</b>
-                - Singer, Composer, Music Producer and Founder of Arteffects International</p>
-            </blockquote>
+        <!-- BEGIN SLIDE -->
+        <div class="swiper-slide fit bg-info">
+          <!-- BEGIN IMAGE PARRALAX -->
+          <div class="slider-wrapper">
+            <div class="background-wrapper" data-swiper-parallax="20%">
+              <div class="background bg-position-center hidden-xs"
+                data-pages-bg-image="assets/images/hero/hh1.jpg"
+                data-bg-overlay="black"
+                data-overlay-opacity="0.2"
+                draggable="false" ></div>
+              <div class="background bg-position-center visible-xs"
+                data-pages-bg-image="assets/images/hero/hh3.jpg"
+                data-bg-overlay="black"
+                data-overlay-opacity="0.2"
+                draggable="false" ></div>
+            </div>
           </div>
+          <!-- END IMAGE PARRALAX -->
+          <!-- BEGIN CONTENT -->
+          <div class="content-layer">
+            <div class="inner full-height">
+              <div class="container-xs-height full-height">
+                <div class="col-xs-height col-middle">
+                  <div class="container text-center">
+                    <h1 class="light text-white font-gotham text-uppercase"
+                      data-pages-animation="standard"
+                      data-delay="1100"
+                      data-type="transition.slideDownIn">
+
+                      Know the <span class="fw-900 text-uppercase" data-pages-init="text-rotate" data-speed="4000" data-animation="flipUp">Man, Music, Apparel, Work</span>
+
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END CONTENT -->
+        </div>
+        <!-- END SLIDE -->
+
+        <!-- BEGIN SLIDE -->
+        <div class="swiper-slide fit bg-white" data-pages-header="alternate">
+          <!-- BEGIN IMAGE PARRALAX -->
+          <div class="slider-wrapper">
+            <div class="background-wrapper" data-swiper-parallax="20%">
+              <div data-pages-bg-image="assets/images/hero/hh2-bw.jpg" draggable="false" class="background bg-position-center"></div>
+            </div>
+          </div>
+          <!-- END IMAGE PARRALAX -->
+          <!-- BEGIN CONTENT -->
+          <div class="content-layer">
+            <div class="inner full-height">
+              <div class="container-xs-height full-height">
+                <div class="col-xs-height col-middle">
+                  <div class="container text-center">
+                    <h1 class="light text-black font-gotham text-uppercase"
+                      data-pages-animation="standard"
+                      data-delay="1100"
+                      data-type="transition.slideDownIn">
+
+                      Follow the <span class="fw-900" data-pages-init="text-rotate" data-speed="4000" data-animation="flipUp">Journey, Mind, Path</span>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END CONTENT -->
+        </div>
+        <!-- END SLIDE -->
+
+      </div>
+
+      <!-- BEGIN ANIMATED MOUSE -->
+      <div class="mouse-wrapper">
+        <div class="mouse">
+          <div class="mouse-scroll"></div>
         </div>
       </div>
+
+      <!-- Add Navigation -->
+      <div class="swiper-navigation swiper-white-solid swiper-button-prev auto-reveal"></div>
+      <div class="swiper-navigation swiper-white-solid swiper-button-next auto-reveal"></div>
     </div>
   </div>
+  <!-- END SLIDER -->
 </section>
+<!-- END JUMBOTRON -->
 
 <!-- BEGIN CONTENT SECTION -->
 <section class="p-t-60 p-b-60 bg-white">
   <div class="container">
-    <div class="md-p-l-20 md-p-r-20 xs-no-padding">
-      <div class="row">
-        <div class="col-sm-6 b-r b-grey xs-b-b b-grey">
-          <h5 class="block-title hint-text no-margin">Explore</h5>
-          <h2 class="m-t-5">Different ways to Organize your Content.</h2>
-          <div class="col-sm-10 no-padding">
-            <h4 class="hint-text">We planned out every part of the design, you just have to think of the content</h4>
-            <p class="m-t-30 fs-12 font-lato hint-text col-sm-10 no-padding">Crafted specially, giving attention to detail, this is a celebration of creativity with guaranteed smoothness in UI/UX</p>
-          </div>
+    <div class="row">
+      <div class="col-sm-7">
+        <h5 class="block-title hint-text no-margin">Meet Hafiz</h5>
+        <h2 class="m-t-5">Different ways to Organize your Content.</h2>
+
+        <h4 class="hint-text">We planned out every part of the design, you just have to think of the content</h4>
+
+        <div class="col-sm-6 m-b-20">
+          <p class="fs-12 hint-text">Crafted specially, giving attention to detail, this is a celebration of creativity with guaranteed smoothness in UI/UX</p>
         </div>
-        <div class="col-sm-6 xs-p-t-30">
-          <div class="p-l-30 xs-no-padding">
-            <div class="col-sm-6 no-padding m-b-20 m-t-20">
-              <p class="m-t-30 fs-12 font-lato hint-text">Crafted specially, giving attention to detail, this is a celebration of creativity with guaranteed smoothness in UI/UX</p>
-            </div>
-            <div class="clearfix"></div>
-            <p>Our motivation "Perfection simplified" helps to craft meaningful experiences for the people around us, This mission inspires us to jump out of bed each day and guides every aspect of what we do.
-            </p>
-          </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="font-raleway text-white home-lyric bg-position-center text-right"
+          data-pages-bg-image="assets/images/hero/hh3.jpg"
+          data-bg-overlay-class="bg-master-dark"
+          data-overlay-opacity="0.5">
+
+          <h3 class="fs-20 text-white font-gotham">
+            Duhai Rasulullah engkaulah Imam buat kami&nbsp;semua.</h3>
+
+          <h3 class="fs-20 text-white font-gotham">
+            Hanya syafaatmu, yang kami&nbsp;harapkan.</h3>
+
+          <h3 class="fs-20 text-white font-gotham">
+            Semoga bertemu di hari&nbsp;perhitungan.</h3>
+
+          <p class="m-t-10 fs-14">
+            <b>Penyelamat</b>&mdash;Written by Hafiz Hamidun</p>
         </div>
       </div>
     </div>
@@ -54,101 +138,11 @@
 </section>
 <!-- END CONTENT SECTION -->
 
-<!-- BEGIN CONTENT SECTION -->
-<section class="p-b-85 p-t-75 p-b-65 p-t-55 bg-master-lightest">
-  <div class="container">
-    <div class="md-p-l-20 xs-no-padding clearfix">
-      <div class="col-sm-4 no-padding">
-        <div class="p-r-40 md-pr-30">
-          <img alt="" class="m-b-20" src="assets/images/Parachute.svg">
-          <h6 class="block-title p-b-5">Launch Design
-            <i class="pg-arrow_right m-l-10"></i>
-          </h6>
-          <p class="m-b-30">Awesome notepad app. It gives you a quick and simple notepad editing experience when you write notes.</p>
-          <p class="hint-text font-lato small-text col-sm-9 no-padding">Icon Fonts, Vector SVG's, pages 14x14px vector icons.</p>
-        </div>
-        <div class="visible-xs b-b b-grey-light m-t-30 m-b-30"></div>
-      </div>
-      <div class="col-sm-4 no-padding">
-        <div class="p-r-40 md-pr-30">
-          <img alt="" class="m-b-20" src="assets/images/Prizemedalion.svg">
-          <h6 class="block-title p-b-5">Award Wining
-            <i class="pg-arrow_right m-l-10"></i>
-          </h6>
-          <p class="m-b-30">Quick chat helps you to Keep in touch with your friends and colleagues while working. It has a unique responsive design.</p>
-          <p class="hint-text font-lato small-text col-sm-9 no-padding">Limitless possibilities, Highly customizable, Great UI & UX</p>
-        </div>
-        <div class="visible-xs b-b b-grey-light m-t-30 m-b-30"></div>
-      </div>
-      <div class="col-sm-4 no-padding">
-        <div class="p-r-40 md-pr-30">
-          <img alt="" class="m-b-20" src="assets/images/Umbrella.svg">
-          <h6 class="block-title p-b-5">Shop ready
-            <i class="pg-arrow_right m-l-10"></i>
-          </h6>
-          <p class="m-b-30">This is a very young collection of charts, with the goal of keeping these components very customizable.</p>
-          <p class="hint-text font-lato small-text col-sm-9 no-padding">Highly customizable NVD3, rickshaw, Spark Lines, D3.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- END CONTENT SECTION -->
-
+<!-- VIDEO -->
 <section class="text-center bg-white" data-fitvids>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/-L4NL9JcAeo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  <div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-video" data-allowfullscreen="1" data-href="/HafizHamidun/videos/vb.27365242512/10153104753712513/?type=1"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/HafizHamidun/videos/10153104753712513/"><a href="https://www.facebook.com/HafizHamidun/videos/10153104753712513/">Hafiz Hamidun - Penyelamat (Official Music Video)</a><p>Selawat dan salam ke atas Rasulullah SAW.Terimalah video eksklusif Penyelamat dari album saya &#039;I Love Rasulullah&#039;Terbitan Arteffects InternationalEdaran bersama Sony Music Malaysia#Penyelamat</p>Posted by <a href="https://www.facebook.com/HafizHamidun">Hafiz Hamidun</a> on Sunday, September 20, 2015</blockquote></div></div>
+  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/-L4NL9JcAeo?wmode=opaque&amp;rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->
 </section>
-
-<section class="p-b-65 p-t-60 bg-master-darkest">
-  <div class="container">
-    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-      <div class="text-center">
-        <h5 class="block-title text-white no-margin">Menu Clipping
-        </h5>
-        <h1 class="text-white col-sm-12 m-t-5 m-b-30">Celebrate Motion paralax scroll.</h1>
-      </div>
-      <div class="row m-t-30">
-        <div class="col-sm-4">
-          <div class="progress progress-small transparent-white m-t-15">
-            <div class="progress-bar progress-bar-white" data-pages-animate="progressbar" data-percentage="79%"></div>
-          </div>
-          <h3 class="no-margin text-white">
-            <span data-animation-duration="800" data-pages-animate="number" data-value="200">0</span>%
-          </h3>
-          <p class="font-lato hint-text fs-12 text-white">
-            Smoother
-          </p>
-          <p></p>
-        </div>
-        <div class="col-sm-4">
-          <div class="progress progress-small transparent-white m-t-15">
-            <div class="progress-bar progress-bar-white" data-pages-animate="progressbar" data-percentage="79%"></div>
-          </div>
-          <h3 class=" no-margin text-white">
-            <span data-animation-duration="800" data-pages-animate="number" data-value="200">0</span>%
-          </h3>
-          <p class="font-lato hint-text fs-12 text-white">
-            Lighter
-          </p>
-          <p></p>
-        </div>
-        <div class="col-sm-4">
-          <div class="progress progress-small transparent-white m-t-15">
-            <div class="progress-bar progress-bar-white" data-pages-animate="progressbar" data-percentage="79%"></div>
-          </div>
-          <h3 class=" no-margin text-white">
-            <span data-animation-duration="800" data-pages-animate="number" data-value="200">0</span>ma
-          </h3>
-          <p class="font-lato hint-text fs-12 text-white">
-            Micro Awesomness
-          </p>
-          <p></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- BEGIN END SECTION -->
 
 <!-- BEGIN BANNER FOOTER-->
 <section class="p-b-50 p-t-50 bg-white">
@@ -158,7 +152,7 @@
         <div class="text-center">
           <h1 class="m-b-0">Sound is divine. Music is man-made.</h1>
           <p class="m-b-30">That's how art connects to our spirituality.</p>
-          <a class="btn btn-lg btn-primary btn-cons btn-rounded" href="/music">Explore</a>
+          <a class="btn btn-lg btn-primary btn-cons btn-rounded font-montserrat all-caps" href="/music">Explore</a>
         </div>
       </div>
     </div>

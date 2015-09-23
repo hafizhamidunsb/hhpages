@@ -3,17 +3,25 @@
   :headerextras => 'data-pages-header="autoresize" data-pages-resize-class="light"'
 } %>
 
-<section class="vh-50 bg-position-center" data-pages-bg-image="assets/images/hero/contact.jpg" data-bg-overlay="#272b38" data-overlay-opacity="0.6" data-pages="parallax">
-    <div class="container-xs-height full-height">
-      <div class="col-xs-height col-middle text-center">
-        <div class="col-sm-12">
-          <h1 class="text-white inner font-raleway">
-            I'd love to hear <b>from you.</b>
-          </h1>
-        </div>
+<!-- BEGIN HERO WITH PARALLAX -->
+<section class="vh-50 minh-500 bg-position-center"
+  data-pages="parallax"
+  data-pages-bg-image="assets/images/hero_6.jpg"
+  data-bg-overlay-class="bg-master-darkest"
+  data-overlay-opacity="0.4">
+
+  <div class="container-xs-height full-height">
+    <div class="col-xs-height col-middle text-center">
+      <div class="col-sm-12">
+        <h1 class="text-white inner font-gotham text-uppercase">
+          I'd love to hear <b>from you.</b>
+        </h1>
       </div>
     </div>
+  </div>
+
 </section>
+<!-- END HERO WITH PARALLAX -->
 
 <!-- START CONTACT SECTION -->
 <section class="p-t-50 p-b-100 sm-p-b-30 sm-m-b-30 bg-master-lightest">
@@ -21,27 +29,28 @@
     <div class="row">
       <div class="col-md-6">
         <div class="p-r-40 sm-p-r-0">
-          <form class="m-t-15">
+          <form class="m-t-15" action="http://formspree.io/newmedia@hafizhamidun.com" method="POST">
             <div class="row">
               <div class="col-sm-12">
                 <div class="form-group form-group-default">
                   <label>Name</label>
-                  <input class="form-control" type="text">
+                  <input class="form-control" type="text" name="name">
                 </div>
               </div>
             </div>
             <div class="form-group form-group-default">
               <label>Email</label>
-              <input class="form-control" placeholder="This can be changed later" type="email">
+              <input class="form-control" placeholder="This can be changed later" type="email" name="_replyto">
             </div>
             <div class="form-group form-group-default">
               <label>Message</label>
-              <textarea class="form-control" placeholder="Type the message you wish to send" style="height:100px"></textarea>
+              <textarea class="form-control" placeholder="Type the message you wish to send" name="message" style="height:100px"></textarea>
             </div>
             <div class="sm-p-t-10 clearfix">
-              <p class="pull-left small hint-text m-t-5">
+              <p class="pull-left small hint-text no-margin col-middle" style="line-height:35px">
                 I hereby certify that the information above is true and accurate.
               </p>
+              <input type="text" name="_gotcha" style="display:none" />
               <button class="btn btn-primary font-montserrat all-caps fs-12 pull-right xs-pull-left">Submit</button>
             </div>
             <div class="clearfix"></div>
@@ -51,16 +60,16 @@
       <div class="col-md-6">
         <div class="visible-xs visible-sm b-b b-grey-light m-t-35 m-b-30"></div>
         <div class="p-l-40 sm-p-l-0 sm-p-t-10">
-          <h3>
-            Hafiz Hamidun is exclusively represented by Arteffects International.
+          <h3 style="line-height:1.2">
+            Hafiz Hamidun is exclusively represented by <a href="//arteffects.international" target="_blank">Arteffects International</a>.
           </h3>
           <p>
-            To contact me regarding any business ventures, music productions, performances, or just about anything, feel free to contact me.
+            To reach Hafiz Hamidun regarding any business ventures, music productions, performances, or just about anything, feel free to use the contact form on the left, call/leave a message at the numbers below, or drop a line in the email.
           </p>
           <br>
           <h5 class="block-title hint-text m-b-0">
-                Hafiz Hamidun's Public Inquiries &amp; Communications
-            </h5>
+            Public Inquiries &amp; Communications
+          </h5>
           <br>
           <div class="row">
             <div class="col-sm-6">

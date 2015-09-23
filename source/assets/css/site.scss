@@ -1,53 +1,164 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,700|Lato:300,700);
 @import url(/assets/fonts/font-icons.css);
 
 @import "bootstrap-sass";
 @import "pages-compiled";
 @import "pages-icons";
-@import "easing";
-@import "social";
+
+@import "_libs/breakpoints";
+@import "_libs/easing";
+@import "_libs/social";
+@import "_libs/fonts";
+
+// Fonts
+.font-helvetica {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.font-gotham {
+  font-family: 'Gotham', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  b, strong {
+    font-weight: 900;
+  }
+}
 
 p {
   line-height: 1.8;
 }
 
+.header {
+  &.transparent-light {
+    .menu i[class^="pg-"] {
+      transition: all 0.3s ease;
+    }
+    &.alternate .menu i[class^="pg-"] {
+      color: #000;
+    }
+  }
+
+  .logo-wrapper {
+    a {
+      display: block;
+      position: relative;
+      height: 110px;
+      width: 250px;
+      text-align: center;
+      transition: all 0.4s ease !important;
+
+      .logo, .alt {
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        transition: all 0.4s ease !important;
+      }
+      .alt {
+        opacity: 0;
+      }
+
+      @include breakpoint(xs) {
+        height: 70px;
+      }
+    }
+  }
+
+  &.minimized {
+    .logo-wrapper a {
+      height: 60px;
+    }
+  }
+
+  &.minimized, &.alternate {
+    .logo-wrapper a {
+      .logo {
+        opacity: 0;
+      }
+      .alt {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+blockquote:before {
+  font-family: 'font-icons';
+  content: "\e7ad";
+  margin-right: 13px;
+  float: left;
+  font-size: 3em;
+}
+
+.home-lyric {
+  padding: 300px 30px 30px;
+
+  h3 {
+    line-height: 1.15;
+    letter-spacing: -0.05em;
+  }
+}
+
+[data-fitvids] {
+  position: relative;
+
+  .fluid-width-video-wrapper {
+    z-index: 100;
+  }
+
+  .video-overlay {
+    z-index: 200;
+  }
+}
+
+// =========================================
+// Other helpers
+
 .bg-position-center {
   background-position: center center;
 }
 
-.font-lato {
-  font-family: "Lato", sans-serif !important;
+@include breakpoint(xs) {
+  .bg-position-left-xs {
+    background-position: left center;
+  }
 }
 
-.header.transparent-light .menu i[class^="pg-"] {
-  transition: all 0.3s ease;
-}
-.header.transparent-light.alternate .menu i[class^="pg-"] {
-  color: #000;
-}
-
-blockquote:before {
-  font-family: FontAwesome;
-  content: "\f10d";
-  margin-right: 13px;
-  float: left;
-  font-size: 2em;
-}
-
+// vertical heights
 $i: 0;
 @while $i <= 100 {
-  .vh-#{$i} {
-    height: $i * 1vh;
-  }
+  .vh-#{$i} { height: $i * 1vh; }
 
   $i: $i + 10;
 }
 
+// pixel heights
 $i: 0;
 @while $i <= 1000 {
-  .h-#{$i} {
-    height: $i * 1px;
-  }
+  .h-#{$i} { height: $i * 1px; }
 
   $i: $i + 50;
+}
+
+// min/max heights
+$i: 0;
+@while $i <= 1000 {
+  .minh-#{$i} { min-height: $i * 1px; }
+
+  $i: $i + 50;
+}
+
+$i: 0;
+@while $i <= 1000 {
+  .maxh-#{$i} { max-height: $i * 1px; }
+
+  $i: $i + 50;
+}
+
+// font weights
+
+$i: 100;
+@while $i <= 900 {
+  .fw-#{$i} { font-weight: $i; }
+
+  $i: $i + 100;
 }

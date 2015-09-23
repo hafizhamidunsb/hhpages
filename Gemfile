@@ -19,6 +19,7 @@ gem 'middleman-minify-html'
 # Precompilers
 gem 'coffee-script'
 gem 'sass'
+gem 'compass'
 
 # image
 gem 'fastimage'

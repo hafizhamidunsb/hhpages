@@ -1,12 +1,15 @@
-'use strict';
-$(function() {
+(function($) {
+  'use strict';
 
-  // Social icon
+  $.Pages.init();
+
   $('.social-icon i[class^=icon-]').each(function() {
     $(this).clone().addClass($(this).attr('class') + '-cloned').appendTo($(this).parent());
   });
 
   $('[data-fitvids]').fitVids();
+
+  $('p').unorphanize();
 
   //Intialize Slider
   var slider = new Swiper('#hero', {
@@ -17,16 +20,21 @@ $(function() {
     parallax: true,
     speed: 1000
   });
+  //
+  // $('[data-fitvids]').each(function () {
+  //   var vidwrapper = $(this).find('.fluid-width-video-wrapper').css({
+  //     'opacity': 0,
+  //     'visibility': 'hidden'
+  //   });
+  //   $(this).click(function () {
+  //     vidwrapper.css({
+  //       'opacity': 1,
+  //       'visibility': 'visible'
+  //     });
+  //     $(this).unbind("click");
+  //   });
+  // });
 
-  //Intialize Testamonials
-  var testimonials_slider = new Swiper('#testimonials_slider', {
-    pagination: '.swiper-pagination',
-    paginationClickable: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    parallax: true,
-    speed: 1000
-  });
   //
   // function fbLikeCount(id, appid, appsecret) {
   //   var url = 'https://graph.facebook.com/' + id + '?access_token=' + appid + '|' + appsecret + '&fields=likes&callback=?';
@@ -44,4 +52,4 @@ $(function() {
   // }
   // igFollowersCount('9084392', '32695385.4035b3c.d0dcbf6b13454f608227ade96235a2f9')
 
-});
+})(window.jQuery);
