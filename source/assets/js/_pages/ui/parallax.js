@@ -15,6 +15,10 @@
     // TODO: rename .inner to .page-cover-content
     this.$content = this.$element.find('.inner');
 
+    // this.$element.css('transition', 'all 100ms');
+    // this.$coverPhoto.css('transition', 'all 100ms');
+    // this.$content.css('transition', 'all 100ms');
+
     // if cover photo img is found make it a background-image
     if (this.$coverPhoto.find('> img').length) {
       var img = this.$coverPhoto.find('> img');

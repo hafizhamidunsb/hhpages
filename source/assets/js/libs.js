@@ -1,39 +1,47 @@
 // CORE FRAMEWORK
-//= require "jquery"
+//= require jquery
 
 // SLIDER
 // Customized swiper plugin
-//= require "plugins/swiper/js/swiper.jquery"
+//= require plugins/swiper/js/swiper.jquery
 
-//= require "velocity/velocity"
-//= require "velocity/velocity.ui"
+//= require velocity/velocity
+//= require velocity/velocity.ui
 
 // RETINA IMAGE LOADER
-//= require "jquery-unveil"
+//= require jquery-unveil
 
 // TEXT ROTATOR
-//= require "plugins/text-rotate/jquery.simple-text-rotator"
+//= require plugins/text-rotate/jquery.simple-text-rotator
 
 // AUTO-ANIMATE NUMBERS
-//= require "jquery_appear"
-//= require "plugins/animateNumber/jquery.animateNumbers"
+//= require jquery_appear
+//= require plugins/animateNumber/jquery.animateNumbers
 
 // VIDEO
-//= require "jquery.fitvids"
+//= require jquery.fitvids
 
 // ISOTOPE
-//= require "imagesloaded/imagesloaded.pkgd"
-//= require "isotope/dist/isotope.pkgd"
+//= require waitForImages
+//= require isotope/dist/isotope.pkgd
 
 // PAGES FRONTEND
-//= require "_pages/pages.image.loader.js"
-//= require "_pages/pages.frontend.js"
-//= require "_pages/ui/float"
-//= require "_pages/ui/header"
-//= require "_pages/ui/parallax"
+//= require _pages/pages.image.loader.js
+//= require _pages/pages.frontend.js
+//= require _pages/ui/float
+//= require _pages/ui/header
+//= require _pages/ui/parallax
 
 // GALLERY
-//= require "_gallery"
+//= require _gallery
 
 // unorphanize
-//= require "jquery-unorphanize"
+//= require jquery-unorphanize
+
+// VALIDATION
+//= require jquery-validation
+
+//= require bootstrap-sass/assets/javascripts/bootstrap/alert
+//= require bootstrap-sass/assets/javascripts/bootstrap/transition
+
+//= require _SmoothScroll

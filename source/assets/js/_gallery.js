@@ -1,29 +1,23 @@
 (function($) {
+  "use strict";
 
-  /* GRID
-  -------------------------------------------------------------*/
-
-  /*
-      Wait for the images to be loaded before applying
-      Isotope plugin.
-  */
-  var $gallery = $('.gallery');
-  $gallery.imagesLoaded(function() {
-    applyIsotope();
-  });
-
-  /*  Apply Isotope plugin
-      isotope.metafizzy.co
-  */
+  var $gallery = $(".gallery");
   var applyIsotope = function() {
     $gallery.isotope({
-      itemSelector: '.gallery-item',
+      itemSelector: ".grid",
       percentPosition: true,
       masonry: {
-        columnWidth: '.grid-sizer',
+        columnWidth: ".grid-sizer",
         gutter: 0
       }
-    })
+    });
+    setTimeout(function () {
+      $gallery.isotope("layout");
+    });
   }
+
+  $gallery.waitForImages(true).done(function() {
+    applyIsotope();
+  });
 
 })(window.jQuery);

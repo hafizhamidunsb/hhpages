@@ -12,6 +12,7 @@
   },
   "private": "true",
   "devDependencies": {
+    "eslint": "*",
     "grunt-concurrent": "^2.0.3",
     "grunt-middleman": "^0.2.0",
     "grunt-shell": "^1.1.2"
