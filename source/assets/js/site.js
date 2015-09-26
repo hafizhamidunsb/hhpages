@@ -72,21 +72,24 @@
     var facebookLike = function(userid, appid, appsecret) {
       var url = "https://graph.facebook.com/" + userid + "?access_token=" + appid + "|" + appsecret + "&fields=likes&callback=?";
       $.getJSON(url, function(data) {
-        $('#sc-facebook').html(nFormatter(data.likes, 1));
+        $('.c-facebook').addClass('loaded');
+        $('.c-facebook .count').html(nFormatter(data.likes, 1));
       });
     };
 
     var instagramFollowers = function(userid, access_token) {
       var url = "https://api.instagram.com/v1/users/" + userid + "/?access_token=" + access_token + "&callback=?";
       $.getJSON(url, function(data) {
-        $('#sc-instagram').html(nFormatter(data.data.counts.followed_by, 1));
+        $('.c-instagram').addClass('loaded');
+        $('.c-instagram .count').html(nFormatter(data.data.counts.followed_by, 1));
       });
     };
 
     var twitterFollowers = function() {
       var url = "http://do.wansaleh.com/hh/twitter.php?user=hafizhamidun&callback=?";
       $.getJSON(url, function(data) {
-        $('#sc-twitter').html(nFormatter(data.followers_count, 1));
+        $('.c-twitter').addClass('loaded');
+        $('.c-twitter .count').html(nFormatter(data.followers_count, 1));
       });
     };
 
