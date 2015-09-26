@@ -58,7 +58,7 @@ configure :build do
   activate :directory_indexes
 
   # Minify HTML
-  activate :minify_html
+  # activate :minify_html
 
   # Optimize images
   activate :imageoptim
