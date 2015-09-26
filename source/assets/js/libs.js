@@ -44,4 +44,4 @@
 //= require bootstrap-sass/assets/javascripts/bootstrap/alert
 //= require bootstrap-sass/assets/javascripts/bootstrap/transition
 
-//= require _SmoothScroll
+// require _SmoothScroll

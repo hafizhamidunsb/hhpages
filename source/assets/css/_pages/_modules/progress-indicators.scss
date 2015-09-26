@@ -192,6 +192,10 @@
   &.progress-circle-complete {
     background-image: url("#{$base-img-url}/progress/progress-circle-complete.svg");
   }
+
+  &.progress-circle-white {
+    background-image: url("#{$base-img-url}/progress/progress-circle-white.svg");
+  }
 }
 /* Circular Progress
 ------------------------------------
@@ -239,6 +243,12 @@
   &.progress-circle-complete {
     .pie .half-circle {
       border-color: $color-complete;
+    }
+  }
+
+  &.progress-circle-white {
+    .pie .half-circle {
+      border-color: #fff;
     }
   }
 

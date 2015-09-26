@@ -1628,7 +1628,6 @@
             if (s.lazy) s.lazy.onTransitionStart();
             if (runCallbacks) {
                 s.emit('onTransitionStart', s);
-                console.log(s.activeIndex, s.previousIndex);
                 if (s.activeIndex !== s.previousIndex) {
                     s.emit('onSlideChangeStart', s);
                     s.animateReset(s);
