@@ -28,7 +28,7 @@ set :fonts_dir, 'assets/fonts'
 set :partials_dir, 'partials'
 set :build_dir, '../hafizhamidunsb.github.io'
 
-set :trailing_slash, false
+set :trailing_slash, true
 
 # Page options, layouts, aliases and proxies
 # ----------------------------------------------
