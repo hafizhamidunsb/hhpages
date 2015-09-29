@@ -69,33 +69,16 @@
       return num;
     };
 
-    var facebookLike = function(userid, appid, appsecret) {
-      var url = "https://graph.facebook.com/" + userid + "?access_token=" + appid + "|" + appsecret + "&fields=likes&callback=?";
-      $.getJSON(url, function(data) {
-        $('.c-facebook').addClass('loaded');
-        $('.c-facebook .count').html(nFormatter(data.likes, 1));
+    var socialCount = function() {
+      $.getJSON('http://do.wansaleh.com/hh/social.php?callback=?', function(data) {
+        $('.c-facebook .count').html(nFormatter(data.facebook.likes, 1));
+        $('.c-twitter .count').html(nFormatter(data.twitter.followers_count, 1));
+        $('.c-instagram .count').html(nFormatter(data.instagram.data.counts.followed_by, 1));
+        $('.c-facebook, .c-twitter, .c-instagram').addClass('loaded');
       });
     };
 
-    var instagramFollowers = function(userid, access_token) {
-      var url = "https://api.instagram.com/v1/users/" + userid + "/?access_token=" + access_token + "&callback=?";
-      $.getJSON(url, function(data) {
-        $('.c-instagram').addClass('loaded');
-        $('.c-instagram .count').html(nFormatter(data.data.counts.followed_by, 1));
-      });
-    };
-
-    var twitterFollowers = function() {
-      var url = "http://do.wansaleh.com/hh/twitter.php?user=hafizhamidun&callback=?";
-      $.getJSON(url, function(data) {
-        $('.c-twitter').addClass('loaded');
-        $('.c-twitter .count').html(nFormatter(data.followers_count, 1));
-      });
-    };
-
-    facebookLike('HafizHamidun', '1490111327981846', '22742b107b93cd98e66b7522b5c51561');
-    instagramFollowers('9084392', '32695385.4035b3c.d0dcbf6b13454f608227ade96235a2f9');
-    twitterFollowers();
+    socialCount();
 
     // var respondify = function() {
     //   $('iframe[src*="embed.spotify.com"]').each(function() {
