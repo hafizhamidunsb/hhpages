@@ -30,25 +30,26 @@
       submitHandler: function(form) {
         $contactForm.find('.alert').remove();
 
-        return $.ajax({
-          url: '//formspree.io/wansaleh@gmail.com',
+        $.ajax({
+          url: '//formspree.io/newmedia@hafizhamidun.com',
           method: 'POST',
           data: $contactForm.serialize(),
           dataType: 'json',
 
           success: function(data) {
-            $contactForm.append('<div class="m-t-10 alert alert-success fade in" role="alert"><button class="close" data-dismiss="alert"></button><i class="fa fa-check"></i> <strong>Success</strong> Your message has been sent. Thank you.</div>');
+            $contactForm.append('<div class="alert alert-success fade in" role="alert"><button class="close" data-dismiss="alert"></button><i class="fa fa-check"></i> <strong>Success</strong> Your message has been sent. Thank you.</div>');
           },
 
           error: function(err) {
-            $contactForm.append('<div class="m-t-10 alert alert-error fade in" role="alert"><button class="close" data-dismiss="alert"></button><i class="fa fa-times"></i> <strong>Error</strong> Something is wrong with this.</div>');
+            $contactForm.append('<div class="alert alert-error fade in" role="alert"><button class="close" data-dismiss="alert"></button><i class="fa fa-times"></i> <strong>Error</strong> Please correct the errors above.</div>');
           }
         });
       },
 
-      invalidHandler: function() {
+      invalidHandler: function(event, validator) {
+        console.log(validator.numberOfInvalids());
         $contactForm.find('.alert').remove();
-        $contactForm.append('<div class="m-t-10 alert alert-error fade in" role="alert"><button class="close" data-dismiss="alert"></button><i class="fa fa-times"></i> <strong>Error</strong> Something is wrong with this.</div>');
+        $contactForm.append('<div class="alert alert-error fade in" role="alert"><button class="close" data-dismiss="alert"></button><i class="fa fa-times"></i> <strong>Invalid</strong> Please correct the errors above.</div>');
       }
     });
 
