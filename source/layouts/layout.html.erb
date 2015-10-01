@@ -46,7 +46,13 @@
 
   <body class="<%= page_classes %> pace-dark">
 
-    <%= yield %>
+    <main id="main">
+
+      <%= yield %>
+
+    </main>
+
+    <%= partial "footer" %>
 
     <script type="text/javascript" src="/assets/js/libs.js"></script>
     <script type="text/javascript" src="/assets/js/site.js"></script>

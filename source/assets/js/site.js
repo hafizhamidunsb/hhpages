@@ -74,7 +74,7 @@
       $.getJSON('http://do.wansaleh.com/hh/social.php?callback=?', function(data) {
         $('.c-facebook .count').html(nFormatter(data.facebook.likes, 1));
         $('.c-twitter .count').html(nFormatter(data.twitter.followers_count, 1));
-        $('.c-instagram .count').html(nFormatter(data.instagram.data.counts.followed_by, 1));
+        $('.c-instagram .count').html(nFormatter(data.instagram.counts.followed_by, 1));
         $('.c-facebook, .c-twitter, .c-instagram').addClass('loaded');
       });
     };
