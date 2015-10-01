@@ -1,7 +1,9 @@
 (function($) {
   'use strict';
 
-  $.Pages.HHinit = function() {
+  $.Pages.HH = {};
+
+  $.Pages.HH.init = function() {
     $('a[data-body]').each(function() {
       if ($('body').hasClass($(this).data('body'))) {
         $(this).addClass('active');
@@ -53,33 +55,44 @@
       }
     });
 
-    var nFormatter = function(num, digits) {
-      var si = [
-        { value: 1E18, symbol: "E" },
-        { value: 1E15, symbol: "P" },
-        { value: 1E12, symbol: "T" },
-        { value: 1E9,  symbol: "G" },
-        { value: 1E6,  symbol: "M" },
-        { value: 1E3,  symbol: "k" }
-      ], i;
-      for (i = 0; i < si.length; i++) {
-        if (num >= si[i].value) {
-          return (num / si[i].value).toFixed(digits).replace(/\.?0+$/, "") + si[i].symbol;
+    (function() {
+      // SOCIAL COUNTER
+
+      var nFormatter = function(num, digits) {
+        var si = [
+          { value: 1E18, symbol: "E" },
+          { value: 1E15, symbol: "P" },
+          { value: 1E12, symbol: "T" },
+          { value: 1E9,  symbol: "G" },
+          { value: 1E6,  symbol: "M" },
+          { value: 1E3,  symbol: "k" }
+        ], i;
+        for (i = 0; i < si.length; i++) {
+          if (num >= si[i].value) {
+            return (num / si[i].value).toFixed(digits).replace(/\.?0+$/, "") + si[i].symbol;
+          }
         }
-      }
-      return num;
-    };
+        return num;
+      };
 
-    var socialCount = function() {
-      $.getJSON('http://do.wansaleh.com/hh/social.php?callback=?', function(data) {
-        $('.c-facebook .count').html(nFormatter(data.facebook.likes, 1));
-        $('.c-twitter .count').html(nFormatter(data.twitter.followers_count, 1));
-        $('.c-instagram .count').html(nFormatter(data.instagram.counts.followed_by, 1));
-        $('.c-facebook, .c-twitter, .c-instagram').addClass('loaded');
+      $.getJSON('http://do.wansaleh.com/api-hh/facebook?callback=?', function(data) {
+        $('.c-facebook .count').html(nFormatter(data.likes, 1));
+        $('.c-facebook').addClass('loaded');
       });
-    };
+      $.getJSON('http://do.wansaleh.com/api-hh/twitter?callback=?', function(data) {
+        $('.c-twitter .count').html(nFormatter(data.followers_count, 1));
+        $('.c-twitter').addClass('loaded');
+      });
+      $.getJSON('http://do.wansaleh.com/api-hh/instagram?callback=?', function(data) {
+        $('.c-instagram .count').html(nFormatter(data.counts.followed_by, 1));
+        $('.c-instagram').addClass('loaded');
+      });
+      $.getJSON('http://do.wansaleh.com/api-hh/youtube?callback=?', function(data) {
+        $('.c-youtube .count').html(nFormatter(data.items[0].statistics.subscriberCount, 1));
+        $('.c-youtube').addClass('loaded');
+      });
 
-    socialCount();
+    })();
 
     // var respondify = function() {
     //   $('iframe[src*="embed.spotify.com"]').each(function() {
@@ -95,6 +108,6 @@
   };
 
   $.Pages.init();
-  $.Pages.HHinit();
+  $.Pages.HH.init();
 
 })(window.jQuery);
