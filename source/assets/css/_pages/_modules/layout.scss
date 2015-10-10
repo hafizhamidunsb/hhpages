@@ -87,9 +87,7 @@
       @include translate3d(0%, 0, 0);
     }
   }
-}
 
-@mixin slideFromRight() {
   [data-pages-direction="slideTop"] {
     display: block;
     @include translate3d(0, -100%, 0);

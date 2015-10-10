@@ -75,35 +75,65 @@
         return num;
       };
 
-      $.getJSON('http://do.wansaleh.com/api-hh/facebook?callback=?', function(data) {
+      $.getJSON('http://wms-api.herokuapp.com/facebook?callback=?', function(data) {
         $('.c-facebook .count').html(nFormatter(data.likes, 1));
         $('.c-facebook').addClass('loaded');
       });
 
-      $.getJSON('http://do.wansaleh.com/api-hh/twitter?callback=?', function(data) {
+      $.getJSON('http://wms-api.herokuapp.com/twitter?callback=?', function(data) {
         $('.c-twitter .count').html(nFormatter(data.followers_count, 1));
         $('.c-twitter').addClass('loaded');
       });
 
-      $.getJSON('http://do.wansaleh.com/api-hh/instagram?callback=?', function(data) {
-        $('.c-instagram .count').html(nFormatter(data.counts.followed_by, 1));
+      $.getJSON('http://wms-api.herokuapp.com/instagram?callback=?', function(data) {
+        $('.c-instagram .count').html(nFormatter(data.data.counts.followed_by, 1));
         $('.c-instagram').addClass('loaded');
       });
 
-      $.getJSON('http://do.wansaleh.com/api-hh/youtube?callback=?', function(data) {
+      $.getJSON('http://wms-api.herokuapp.com/youtube?callback=?', function(data) {
         $('.c-youtube .count').html(nFormatter(data.items[0].statistics.subscriberCount, 1));
         $('.c-youtube').addClass('loaded');
       });
 
-      $.getJSON('http://do.wansaleh.com/api-hh/spotify?callback=?', function(data) {
+      $.getJSON('http://wms-api.herokuapp.com/spotify?callback=?', function(data) {
         $('.c-spotify .count').html(nFormatter(data.followers.total, 1));
         $('.c-spotify').addClass('loaded');
       });
 
-      $.getJSON('http://do.wansaleh.com/api-hh/soundcloud?callback=?', function(data) {
+      $.getJSON('http://wms-api.herokuapp.com/soundcloud?callback=?', function(data) {
         $('.c-soundcloud .count').html(nFormatter(data.followers_count, 1));
         $('.c-soundcloud').addClass('loaded');
       });
+
+      // $.getJSON('http://do.wansaleh.com/api-hh/facebook?callback=?', function(data) {
+      //   $('.c-facebook .count').html(nFormatter(data.likes, 1));
+      //   $('.c-facebook').addClass('loaded');
+      // });
+      //
+      // $.getJSON('http://do.wansaleh.com/api-hh/twitter?callback=?', function(data) {
+      //   $('.c-twitter .count').html(nFormatter(data.followers_count, 1));
+      //   $('.c-twitter').addClass('loaded');
+      // });
+      //
+      // $.getJSON('http://do.wansaleh.com/api-hh/instagram?callback=?', function(data) {
+      //   $('.c-instagram .count').html(nFormatter(data.counts.followed_by, 1));
+      //   $('.c-instagram').addClass('loaded');
+      // });
+      //
+      // $.getJSON('http://do.wansaleh.com/api-hh/youtube?callback=?', function(data) {
+      //   $('.c-youtube .count').html(nFormatter(data.items[0].statistics.subscriberCount, 1));
+      //   $('.c-youtube').addClass('loaded');
+      // });
+      //
+      // $.getJSON('http://do.wansaleh.com/api-hh/spotify?callback=?', function(data) {
+      //   $('.c-spotify .count').html(nFormatter(data.followers.total, 1));
+      //   $('.c-spotify').addClass('loaded');
+      // });
+      //
+      // $.getJSON('http://do.wansaleh.com/api-hh/soundcloud?callback=?', function(data) {
+      //   $('.c-soundcloud .count').html(nFormatter(data.followers_count, 1));
+      //   $('.c-soundcloud').addClass('loaded');
+      // });
 
     })();
 
